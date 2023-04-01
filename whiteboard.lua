@@ -488,6 +488,15 @@ function erasertoggle(pressed)
     end
 
     eraser = not eraser
+
+    -- Make the eraser much bigger than the pencil.
+    if eraser then
+      size = size * 10
+    else
+      size = size / 10
+    end
+    print('eraserupdate() ' .. size)
+    update_vertices()
 end
 
 function clear_button()
